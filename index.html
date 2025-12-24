@@ -131,8 +131,14 @@
     </div>
 
     <video id="input_video" style="display:none; transform: scaleX(-1)" playsinline></video>
-    <audio id="bg-music" src="./audio.mp3" loop></audio>
-
+    <audio id="bg-music" src="./audio.MP3" loop></audio>
+    <script>
+        document.body.addEventListener("click", () => {
+  const audio = document.getElementById("bg-music");
+  audio.volume = 1;
+  audio.play();
+}, { once: true });
+    </script>
     <script type="module">
         import * as THREE from 'three';
         import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
